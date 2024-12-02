@@ -6,4 +6,15 @@ public class Employee {
     private String jobTitle;
     private String employeeID;
 
+    // Default constructor
+    public Employee() {}
+
+    // Parameterised constructor for both Person & Employee details
+    public Employee(String name, int age, String email, String jobTitle, String employeeID) {
+        super (name, age, email);           // Call to Person constructor
+        this.jobTitle = jobTitle;
+        this.employeeID = employeeID;
+    }
+
+
 }
