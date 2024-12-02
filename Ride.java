@@ -16,4 +16,15 @@ public class Ride {
         this.capacity = capacity;
         this.assignedEmployee = assignedEmployee;
     }
+
+    // Getter & Setter for ride name, capacity & assigned employee
+    public String getRideName() { return rideName; }                            // Getter
+    public void setRideName (String rideName) { this.rideName = rideName; }     // Setter
+
+    public int getCapacity() { return capacity; }                               // Getter
+    public void setCapacity (int capacity) {this.capacity = capacity; }         // Setter
+
+    public Employee getAssignedEmployee() { return assignedEmployee; }          // Getter
+    public void setAssignedEmployee (Employee assignedEmployee) {               // Setter
+        this.assignedEmployee = assignedEmployee; }
 }
