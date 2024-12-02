@@ -1,6 +1,6 @@
 // Person with basic attributes
 
-public class Person {
+public abstract class Person {                          // Abstract class: can't be instantiated                                
     private String name;
     private int age;
     private String email;
