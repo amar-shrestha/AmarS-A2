@@ -6,4 +6,14 @@ public class Ride {
     private int capacity;                               // Max capacity of ride
     private Employee assignedEmployee;                  // Employee that will be assigned to operate the ride
 
+    
+    // Default constructor
+    public Ride() {}
+
+    // Parameterised constructor to start the ride details
+    public Ride (String rideName, int capacity, Employee assignedEmployee) {
+        this.rideName = rideName;
+        this.capacity = capacity;
+        this.assignedEmployee = assignedEmployee;
+    }
 }
