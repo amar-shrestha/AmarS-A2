@@ -1,6 +1,6 @@
 // Employee working in the theme park, will extend Person class
 
-public class Employee {
+public class Employee extends Person {
     
     // Instance variables that will be specific to employee
     private String jobTitle;
