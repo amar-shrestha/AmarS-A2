@@ -16,4 +16,11 @@ public class Visitor extends Person {
         this.ticketID = ticketID;
         this.visitDate = visitDate;
     }
+
+    // Getter & Setter for ticket ID & visit Date
+    public String getTicketID () { return ticketID; }                           // Getter
+    public void setTicketID (String ticketID) { this.ticketID = ticketID; }     // Setter
+
+    public Date getVisitDate () { return visitDate; }                           // Getter
+    public void setVisitDate (Date visitDate) { this.visitDate = visitDate; }   // Setter
 }
