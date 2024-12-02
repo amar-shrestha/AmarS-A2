@@ -5,5 +5,5 @@ public class Visitor extends Person {
     
     // Instance variables for visitor (specific)
     private String ticketID;            // Ticket ID of visitor
-    private Date visiDate;              // Visit date of the visitor
+    private Date visitDate;              // Visit date of the visitor
 }
