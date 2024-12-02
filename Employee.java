@@ -16,5 +16,10 @@ public class Employee {
         this.employeeID = employeeID;
     }
 
+    // Getter & Setter for job title & employee ID
+    public String getJobTitle() { return jobTitle; }
+    public void setJobTitle(String jobTitle) { this.jobTitle = jobTitle; }
 
+    public String getEmployeeID() { return employeeID; }
+    public void setEmployeeID (String employeeID) { this.employeeID = employeeID; }
 }
