@@ -8,5 +8,21 @@ public class RideInterface {
     // Remove visitor for the queue
     void removeVisitorFromQueue ();
 
+    // Print the list of visitors in queue
+    void printQueue ();
 
+    // Run a cycle of the ridde
+    void runOneCycle ();
+
+    // Add visitor to Ride history
+    void addVisitorToHistory (Visitor visitor);
+
+    // Check if visitor is in ride history
+    boolean checkVisitorFromHistory (Visitor visitor);
+
+    // Return number of visitors in ride history
+    int numberOfVisitors ();
+
+    // Print ride history
+    void printRideHistory ();
 }
