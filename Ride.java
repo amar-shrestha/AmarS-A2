@@ -27,4 +27,10 @@ public class Ride {
     public Employee getAssignedEmployee() { return assignedEmployee; }          // Getter
     public void setAssignedEmployee (Employee assignedEmployee) {               // Setter
         this.assignedEmployee = assignedEmployee; }
+    
+    // Represents ride in theme park
+    public class Ride implements RideInterface {
+        
+        // Class implementation will follow
+    }
 }
