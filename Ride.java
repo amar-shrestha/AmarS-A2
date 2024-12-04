@@ -48,4 +48,15 @@ public class Ride implements RideInterface {
         }
     }
     
+    @Override
+    public void printQueue() {
+        if (visitorQueue.isEmpty()) {
+            System.out.println ("Queue is empty. ");
+        } else {
+            System.out.println ("Visitor in queue: ");
+            for (Visitor visitor : visitorQueue) {
+                System.out.println ("-" + visitor.getName());
+            }
+        }
+    }
 }
