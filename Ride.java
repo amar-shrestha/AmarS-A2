@@ -64,4 +64,10 @@ public class Ride implements RideInterface {
     public void runOneCycle() {
         System.out.println ("Running one cycle of the ride. ");
     }
+    
+    @Override
+    public void addVisitorToHistory (Visitor visitor) {
+        rideHistory.add(visitor);
+        System.out.println ("Visitor added to ride History. ");
+    }
 }
