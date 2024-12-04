@@ -1,4 +1,7 @@
 // Will represent ride in the park
+
+import java.util.Queue;
+
 public class Ride implements RideInterface {
     
     // Variables to represent ride details
@@ -33,6 +36,16 @@ public class Ride implements RideInterface {
     public void addVisitorToQueue (Visitor visitor) {
         visitorQueue.add(visitor);
         System.out.println ("Visitor added to the queue.");
+    }
+
+    @Override
+    public void removeVisitorFromQueue() {
+        if (!visitorQueue.isEmpty()) {
+            Visitor removed = visitorQueue.poll();
+            System.out.println ("Removed visitor: " + removed.getName());
+        } else {
+            System.out.println ("Queue is empty. ");
+        }
     }
     
 }
