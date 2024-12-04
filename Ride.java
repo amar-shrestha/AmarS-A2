@@ -70,4 +70,9 @@ public class Ride implements RideInterface {
         rideHistory.add(visitor);
         System.out.println ("Visitor added to ride History. ");
     }
+
+    @Override
+    public boolean checkVisitorFromHistory (Visitor visitor) {
+        return rideHistory.contains (visitor);
+    }
 }
