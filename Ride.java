@@ -59,4 +59,9 @@ public class Ride implements RideInterface {
             }
         }
     }
+
+    @Override
+    public void runOneCycle() {
+        System.out.println ("Running one cycle of the ride. ");
+    }
 }
