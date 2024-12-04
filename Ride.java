@@ -79,9 +79,10 @@ public class Ride implements RideInterface {
 
     @Override
     public int numberOfVisitors () {
-        return rideHistory.size();
+        return rideHistory.size();                                      // Returns the size of ride history (Returns count of visitors who have taken the ride)
     }
 
+    // Prints ride history using Iterator to iterate over the LinkedList.
     @Override
     public void printRideHistory() {
         if (rideHistory.isEmpty()) {

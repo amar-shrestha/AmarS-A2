@@ -40,8 +40,31 @@ public class AssignmentTwo {
         rollerCoaster.printQueue();
 
     }
-    public void partFourA () {}                 // part FourA will go here
+    public void partFourA () {                          // part FourA will go here
+        System.out.println ("Part 4A: Ride History Demo ");
 
+        // Create a Ride instance
+        Ride hyperCoaster = new Ride ("Hyper Coaster", 25, null);
+        
+        // Creating visitors
+        Visitor visitor1 = new Visitor ("Amar", 25, "amar@scu.edu.au", "T001", new java.util.Date());
+        Visitor visitor2 = new Visitor ("Rachu", 24, "rachu@scu.edu.au", "T002", new java.util.Date());
+        Visitor visitor3 = new Visitor ("Aadru", 2, "aadru@scu.edu.au", "T003", new java.util.Date());
+
+        // Add visitors to the ride history
+        hyperCoaster.addVisitorToHistory(visitor1);
+        hyperCoaster.addVisitorToHistory(visitor1);
+        hyperCoaster.addVisitorToHistory(visitor1);
+
+        // Print ride history
+        hyperCoaster.printRideHistory();
+
+        // Check if visitor in history
+        System.out.println ("Is Amar in ride history? " + hyperCoaster.checkVisitorFromHistory(visitor1));
+        
+        // Print the number of visitors in history
+        System.out.println ("Total visitors in ride history: " + hyperCoaster.numberOfVisitors());
+    }
     public void partFourB () {}                 // part FourB will go here
 
     public void partFive () {}                  // part Five will go here
