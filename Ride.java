@@ -94,4 +94,10 @@ public class Ride implements RideInterface {
             }
         }
     }
+
+    // Sort ride history using a Comparator
+    public void sortRideHistory() {
+        rideHistory.sort (new VisitorSort());
+        System.out.println ("Ride history has now been sorted. ");
+    }
 }
