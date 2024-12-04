@@ -65,8 +65,33 @@ public class AssignmentTwo {
         // Print the number of visitors in history
         System.out.println ("Total visitors in ride history: " + hyperCoaster.numberOfVisitors());
     }
-    public void partFourB () {}                 // part FourB will go here
+    public void partFourB () {                 // part FourB will go here
+        System.out.println ("Part 4B: Ride History Sorting Demo");
 
+        // Create a Ride instance
+        Ride supermanEscape = new Ride (" Superman Escape", 15, null);
+
+        // Create Visitor instances
+        Visitor visitor1 = new Visitor ("Amar", 25, "amar@scu.edu.au", "T001", new java.util.Date());
+        Visitor visitor2 = new Visitor ("Rachu", 24, "rachu@scu.edu.au", "T002", new java.util.Date());
+        Visitor visitor3 = new Visitor ("Aadru", 2, "aadru@scu.edu.au", "T003", new java.util.Date());
+
+        // Add visitors to ride history
+        supermanEscape.addVisitorToHistory(visitor1);
+        supermanEscape.addVisitorToHistory(visitor2);
+        supermanEscape.addVisitorToHistory(visitor3);
+
+        // Print unsorted history
+        System.out.println ("Unsorted Ride History: ");
+        supermanEscape.printRideHistory();
+
+        // Sorting the history
+        supermanEscape.sortRideHistory();
+
+        // Print sorted history
+        System.out.println ("Sorted Ride History: ");
+        supermanEscape.printRideHistory();
+    }
     public void partFive () {}                  // part Five will go here
 
     public void partSix () {}                   // part Six will go here
