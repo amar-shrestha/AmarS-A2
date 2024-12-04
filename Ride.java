@@ -68,13 +68,13 @@ public class Ride implements RideInterface {
     
     @Override
     public void addVisitorToHistory (Visitor visitor) {
-        rideHistory.add(visitor);
+        rideHistory.add(visitor);                                       // Add Visitor to ride history
         System.out.println ("Visitor added to ride History. ");
     }
 
     @Override
     public boolean checkVisitorFromHistory (Visitor visitor) {
-        return rideHistory.contains (visitor);
+        return rideHistory.contains (visitor);                          // Checks if visitor exists in history
     }
 
     @Override
