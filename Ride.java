@@ -1,11 +1,12 @@
 // Will represent ride in the park
-public class Ride {
+public class Ride implements RideInterface {
     
     // Variables to represent ride details
-    private String rideName;                            // Name of the ride in theme park
-    private int capacity;                               // Max capacity of ride
-    private Employee assignedEmployee;                  // Employee that will be assigned to operate the ride
-
+    private String rideName;                                         // Name of the ride in theme park
+    private int capacity;                                            // Max capacity of ride
+    private Employee assignedEmployee;                               // Employee that will be assigned to operate the ride
+    private Queue<Visitor> visitorQueue = new LinkedList<>();       // Queue to manage visitors waiting for the ride
+    private LinkedList<Visitor> rideHistory = new LinkedList<>();   // List to manage ride history
     
     // Default constructor
     public Ride() {}
