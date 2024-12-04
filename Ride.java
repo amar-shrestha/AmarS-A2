@@ -28,5 +28,11 @@ public class Ride implements RideInterface {
     public Employee getAssignedEmployee() { return assignedEmployee; }          // Getter
     public void setAssignedEmployee (Employee assignedEmployee) {               // Setter
         this.assignedEmployee = assignedEmployee; }
+
+    @Override
+    public void addVisitorToQueue (Visitor visitor) {
+        visitorQueue.add(visitor);
+        System.out.println ("Visitor added to the queue.");
+    }
     
 }
