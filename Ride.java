@@ -1,5 +1,6 @@
 // Will represent ride in the park
 
+import java.util.LinkedList;
 import java.util.Queue;
 
 public class Ride implements RideInterface {
@@ -81,5 +82,15 @@ public class Ride implements RideInterface {
         return rideHistory.size();
     }
 
-    
+    @Override
+    public void printRideHistory() {
+        if (rideHistory.isEmpty()) {
+            System.out.println ("No visitors in ride history. ");
+        } else {
+            System.out.println ("Ride history: ");
+            for (Visitor visitor : rideHistory) {
+                System.out.println ("-" + visitor.getName());
+            }
+        }
+    }
 }
