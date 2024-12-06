@@ -1,5 +1,8 @@
 // Will represent ride in the park
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -124,5 +127,19 @@ public class Ride implements RideInterface {
     public void sortRideHistory() {
         rideHistory.sort (new VisitorSort());
         System.out.println ("Ride history has now been sorted. ");
+    }
+
+    // Method to export ride history to file
+    public void exportRideHistory (String fileName) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            for (Visitor visitor : rideHistory) {
+                // Write visitor details in CSV format: Name, Age, Email, TicketID, visitDate
+                writer.write (visitor.getName () + "," + visitor.getAge() + "," + visitor.getEmail() + "," + visitor.getTicketID() + "," + visitor.getVisitDate());
+                writer.newLine();       // Move to the next line
+            }
+            System.out.println ("Ride history successfully exported to " + fileName);
+        } catch (IOException e) {
+            System.out.println ("Error exporting ride history: " + e.getMessage());     // prints error message if something goes wrong
+        }
     }
 }
