@@ -142,4 +142,31 @@ public class Ride implements RideInterface {
             System.out.println ("Error exporting ride history: " + e.getMessage());     // prints error message if something goes wrong
         }
     }
+
+    // Reads each line, parses visitor details from line and create Visitor object, add visitor to ride history and handle IOException for file-related errors and NumberFormatException for parsing errors.
+    public void importRideHistory (String fileName) {
+        try (BufferedReader reader = new BufferedReader (new FileReader(fileName))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // Split the line into visitor details (CSV format: Name, Age, Email, TicketID, VisitDate)
+                String[] details = line.split (",");
+                if (details.length ==5) {
+                    String name = details [0];
+                    int age = Integer.parseInt(details[1]);
+                    String email = details[2];
+                    String ticketID = details[3];
+                    String visitDateStr = details[4];
+
+                    // Create a Visitor object and add to ride history
+                    Visitor visitor = new Visitor (name, age, email, ticketID, new java.util.Date());
+                    addVisitorToHistory (visitor);
+                }
+            }
+            System.out.println ("Ride history successfully imported from " + fileName);
+        } catch (IOException e) {
+            System.out.println ("Error importing ride history: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println ("Error parsing visitor age: " + e.getmessage());
+        }
+    }
 }
