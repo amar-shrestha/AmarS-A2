@@ -136,6 +136,7 @@ public class AssignmentTwo {
     System.out.println ("Ride history after the second cycle: ");
     rollerCoaster.printRideHistory();
     }
+
     public void partSix () {                   // part Six will go here
     System.out.println ("Part 6: Export Ride history Demo: ");
 
@@ -157,6 +158,20 @@ public class AssignmentTwo {
     hyperCoaster.exportRideHistory (fileName); 
     }
     
-    public void partSeven () {}                 // part Seven will go here
+    public void partSeven () {                   // part Seven will go here
+        System.out.println ("Part 7: Import Ride History Demo: ");
 
+        // Create a Ride instance
+        Ride supermanEscape = new Ride (" Superman Escape", 15, null);
+
+        // File to import ride history from
+        String fileName = "ride_history.csv";
+
+        // Import ride history
+        supermanEscape.importRideHistory(fileName);
+
+        // Print the imported ride history
+        System.out.println ("Imported Ride History: ");
+        supermanEscape.printRideHistory();
+    }
 }
