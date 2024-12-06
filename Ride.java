@@ -11,7 +11,9 @@ public class Ride implements RideInterface {
     private Employee assignedEmployee;                               // Employee that will be assigned to operate the ride
     private Queue<Visitor> visitorQueue = new LinkedList<>();       // Queue to manage visitors waiting for the ride
     private LinkedList<Visitor> rideHistory = new LinkedList<>();   // List to manage ride history
-    
+    private int maxRider;                                           // Max visitor per ride cycle
+    private int numOfCycles = 0;                                    // Number of cycles run (default 0)
+
     // Default constructor
     public Ride() {}
 
