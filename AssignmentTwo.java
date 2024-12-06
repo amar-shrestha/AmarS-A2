@@ -53,8 +53,8 @@ public class AssignmentTwo {
 
         // Add visitors to the ride history
         hyperCoaster.addVisitorToHistory(visitor1);
-        hyperCoaster.addVisitorToHistory(visitor1);
-        hyperCoaster.addVisitorToHistory(visitor1);
+        hyperCoaster.addVisitorToHistory(visitor2);
+        hyperCoaster.addVisitorToHistory(visitor3);
 
         // Print ride history
         hyperCoaster.printRideHistory();
@@ -136,8 +136,27 @@ public class AssignmentTwo {
     System.out.println ("Ride history after the second cycle: ");
     rollerCoaster.printRideHistory();
     }
-    public void partSix () {}                   // part Six will go here
+    public void partSix () {                   // part Six will go here
+    System.out.println ("Part 6: Export Ride history Demo: ");
 
+    // Create a Ride instance
+    Ride hyperCoaster = new Ride ("Hyper Coaster", 25, null);
+
+    // Create visitor instances
+    Visitor visitor1 = new Visitor ("Amar", 25, "amar@scu.edu.au", "T001", new java.util.Date());
+    Visitor visitor2 = new Visitor ("Rachu", 24, "rachu@scu.edu.au", "T002", new java.util.Date());
+    Visitor visitor3 = new Visitor ("Aadru", 2, "aadru@scu.edu.au", "T003", new java.util.Date());
+
+    // Add visitors to the ride history
+    hyperCoaster.addVisitorToHistory(visitor1);
+    hyperCoaster.addVisitorToHistory(visitor2);
+    hyperCoaster.addVisitorToHistory(visitor3);
+
+    // Export ride history to a file
+    String fileName = "ride_history.csv";
+    hyperCoaster.exportRideHistory (fileName); 
+    }
+    
     public void partSeven () {}                 // part Seven will go here
 
 }
