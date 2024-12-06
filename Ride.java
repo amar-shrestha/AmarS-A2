@@ -1,8 +1,8 @@
 // Will represent ride in the park
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -82,7 +82,7 @@ public class Ride implements RideInterface {
         }
         
         if (visitorQueue.isEmpty()) {
-            System.out.println ("Cannot run the ride: No visitors in the queue. ")
+            System.out.println ("Cannot run the ride: No visitors in the queue. ");
             return;
         }
 
@@ -172,7 +172,7 @@ public class Ride implements RideInterface {
         } catch (IOException e) {
             System.out.println ("Error importing ride history: " + e.getMessage());
         } catch (NumberFormatException e) {
-            System.out.println ("Error parsing visitor age: " + e.getmessage());
+            System.out.println ("Error parsing visitor age: " + e.getMessage());
         }
     }
 }
