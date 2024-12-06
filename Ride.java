@@ -40,6 +40,10 @@ public class Ride implements RideInterface {
     public void setAssignedEmployee (Employee assignedEmployee) {               // Setter
         this.assignedEmployee = assignedEmployee; }
 
+    public void setMaxRider (int maxRider) {
+        this.maxRider = maxRider;
+    }
+
     @Override
     public void addVisitorToQueue (Visitor visitor) {
         visitorQueue.add(visitor);
