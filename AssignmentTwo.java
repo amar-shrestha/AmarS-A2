@@ -92,8 +92,50 @@ public class AssignmentTwo {
         System.out.println ("Sorted Ride History: ");
         supermanEscape.printRideHistory();
     }
-    public void partFive () {}                  // part Five will go here
+    public void partFive () {                   // part Five will go here
+    System.out.println ("Part 5: Running Ride Cycle Demo. ");
 
+    // Create a Ride instance
+    Employee operator = new Employee("Shrestha", 35, "shrestha@scu.edu.au", "Operator", "Emp001");
+    Ride rollerCoaster = new Ride ("Roller Coaster", 15, operator);
+    rollerCoaster.setMaxRider(3);               // Set max riders per cycle
+
+    // Create Visitor instances
+    Visitor visitor1 = new Visitor ("Amar", 25, "amar@scu.edu.au", "T001", new java.util.Date());
+    Visitor visitor2 = new Visitor ("Rachu", 24, "rachu@scu.edu.au", "T002", new java.util.Date());
+    Visitor visitor3 = new Visitor ("Aadru", 2, "aadru@scu.edu.au", "T003", new java.util.Date());
+    Visitor visitor4 = new Visitor ("Anju", 24, "anju@scu.edu.au", "T004", new java.util.Date());
+    Visitor visitor5 = new Visitor ("Rajesh", 22, "rajesh@scu.edu.au", "T005", new java.util.Date());
+
+    // Add visitors to the queue
+    rollerCoaster.addVisitorToQueue(visitor1);
+    rollerCoaster.addVisitorToQueue(visitor2);
+    rollerCoaster.addVisitorToQueue(visitor3);
+    rollerCoaster.addVisitorToQueue(visitor4);
+    rollerCoaster.addVisitorToQueue(visitor5);
+
+    // Print the queue before the ride
+    System.out.println ("Queue before the ride: ");
+    rollerCoaster.printQueue();
+
+    // Run one cycle of the ride
+    rollerCoaster.runOneCycle();
+    
+    // Print the Queue after the ride
+    System.out.println ("Queue after the first cycle: ");
+    rollerCoaster.printQueue();
+
+    // Print the ride history
+    System.out.println ("Ride history after the first cycle: ");
+    rollerCoaster.printRideHistory();
+
+    // Run another cycle
+    rollerCoaster.runOneCycle();
+
+    // Print the ride history after the second cycle
+    System.out.println ("Ride history after the second cycle: ");
+    rollerCoaster.printRideHistory();
+    }
     public void partSix () {}                   // part Six will go here
 
     public void partSeven () {}                 // part Seven will go here
