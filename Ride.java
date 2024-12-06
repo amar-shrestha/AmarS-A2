@@ -65,7 +65,30 @@ public class Ride implements RideInterface {
 
     @Override
     public void runOneCycle() {
-        System.out.println ("Running one cycle of the ride. ");
+
+        // Check for assigned operator and visitors in queue before running
+        if (assignedEmployee == null) {
+            System.out.println ("Cannot run the ride: No operator assigned. ");
+            return;
+        }
+        
+        if (visitorQueue.isEmpty()) {
+            System.out.println ("Cannot run the ride: No visitors in the queue. ")
+            return;
+        }
+
+        System.out.println ("Starting a new ride cycle... ");
+        int visitorsThisCycle = 0;
+        
+        // Remove visitors from queue up to maxRider and add them to history
+        while (!visitorQueue.isEmpty() && visitorsThisCycle < maxRider) {
+            Visitor visitor = visitorQueue.poll();                                          // Remove visitor from the queue
+            addVisitorToHistory(visitor);                                                   // Add Visitor to ride history
+            visitorsThisCycle++;
+        }
+
+        numOfCycles++;                                                                      // Increment the cycle count
+        System.out.println ("Ride cycle complted. Visitors this cycle: " + visitorsThisCycle);
     }
     
     @Override
