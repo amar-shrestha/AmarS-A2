@@ -4,7 +4,34 @@ public class AssignmentTwo {
     public static void main (String[] argas) {
         System.out.println ("Welcome to the Theme Park Management System!");
         AssignmentTwo assignment = new AssignmentTwo();
+
+        // Call each part's demo method
+        System.out.println ("Starting Demo..... \n");
+
+        // Part 3: Queue functionality
         assignment.partThree();
+        System.out.println ("\n");              // Add spacing between outputs
+
+        // Part 4A: Ride History functionality
+        assignment.partFourA();
+        System.out.println ("\n");
+
+        // Part 4B: Sorting ride history
+        assignment.partFourB();
+        System.out.println ("\n");
+
+        // Part 5: Running ride cycles
+        assignment.partFive();
+
+        // Part 6: Export ride history to file
+        assignment.partSix();
+        System.out.println("\n");
+
+        // Part 7: Import ride history from file
+        assignment.partSeven();
+        System.out.println ("\n");
+
+        System.out.println ("All demo complete. ");
     }
 
     // Placeholder method for now
@@ -106,6 +133,11 @@ public class AssignmentTwo {
     Visitor visitor3 = new Visitor ("Aadru", 2, "aadru@scu.edu.au", "T003", new java.util.Date());
     Visitor visitor4 = new Visitor ("Anju", 24, "anju@scu.edu.au", "T004", new java.util.Date());
     Visitor visitor5 = new Visitor ("Rajesh", 22, "rajesh@scu.edu.au", "T005", new java.util.Date());
+    Visitor visitor6 = new Visitor("Neha", 27, "neha@scu.edu.au", "T006", new java.util.Date());
+    Visitor visitor7 = new Visitor("Suresh", 30, "suresh@scu.edu.au", "T007", new java.util.Date());
+    Visitor visitor8 = new Visitor("Kiran", 21, "kiran@scu.edu.au", "T008", new java.util.Date());
+    Visitor visitor9 = new Visitor("Pooja", 28, "pooja@scu.edu.au", "T009", new java.util.Date());
+    Visitor visitor10 = new Visitor("Ganesh", 29, "ganesh@scu.edu.au", "T010", new java.util.Date());
 
     // Add visitors to the queue
     rollerCoaster.addVisitorToQueue(visitor1);
@@ -113,6 +145,11 @@ public class AssignmentTwo {
     rollerCoaster.addVisitorToQueue(visitor3);
     rollerCoaster.addVisitorToQueue(visitor4);
     rollerCoaster.addVisitorToQueue(visitor5);
+    rollerCoaster.addVisitorToQueue(visitor6);
+    rollerCoaster.addVisitorToQueue(visitor7);
+    rollerCoaster.addVisitorToQueue(visitor8);
+    rollerCoaster.addVisitorToQueue(visitor9);
+    rollerCoaster.addVisitorToQueue(visitor10);
 
     // Print the queue before the ride
     System.out.println ("Queue before the ride: ");
